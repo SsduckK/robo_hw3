@@ -1,5 +1,5 @@
-int32 x
-int32 y
-int32 z
+int32 a
+int32 b
+int32 c
 ---
-float64 r
+float64 d

@@ -13,7 +13,7 @@ def callback(msg):
   Hdegree = 90-math.acos(reverse_Hdegree)*180/math.pi
   reverse_Wdegree = math.cos(a/math.sqrt(a**2+b**2))
   Wdegree = 90-math.acos(reverse_Wdegree)*180/math.pi
-  print("----subscribe----\n x = %.2f, y = %.2f, z = %.2f\n r = %.2f\n Hdegree = %.2f, Wdegree = %.2f" % (a, b, c, r, Hdegree, Wdegree))
+  print "----subscribe----\n x = %.2f, y = %.2f, z = %.2f\n r = %.2f\n Hdegree = %.2f, Wdegree = %.2f" % (a, b, c, r, Hdegree, Wdegree)
 
 rospy.init_node('algorithm_subscriber')
 sub = rospy.Subscriber('custom_msg', TimePose, callback)
