@@ -13,6 +13,11 @@ add_message_files(
   FILES
   TimePose.msg
 )
+
+add_service_files(
+  FILES
+  OverDistance.srv
+)
 # Generate added messages and services with any dependencies listed here
 generate_messages(
   DEPENDENCIES
