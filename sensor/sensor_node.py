@@ -15,9 +15,9 @@ while not rospy.is_shutdown():
   msg.timestamp = rospy.get_rostime()
   msg.Point = Point(x=randint(1, 10), y=randint(1, 10), z=randint(1, 10))
   pub.publish(msg)
+  print "print : x =", msg.Point.x, "y =", msg.Point.y, "z =", msg.Point.z
   if msg.Point.x > 5 and msg.Point.y > 5 and msg.Point.z > 5:
     req = OverDistanceRequest(a = msg.Point.x, b = msg.Point.y, c = msg.Point.z)
     res = requester(req)
     print "Too FAR", res.d
-  print "print : x =", msg.Point.x, "y =", msg.Point.y, "z =", msg.Point.z
   rate.sleep()
